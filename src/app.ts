@@ -98,17 +98,40 @@
 // }
 
 
-enum Sizes { // add const to inline members
-    Small = 'small',
-    Medium = 'medium',
-    Large = 'large',
+// enum Sizes { // add const to inline members
+//     Small = 'small',
+//     Medium = 'medium',
+//     Large = 'large',
+// }
+
+// let selected: Sizes = Sizes.Small;
+
+// function updateSize(size: Sizes): void {
+//     selected = size;
+// }
+
+// updateSize(Sizes.Large);
+// console.log(selected);
+
+// ************************************Interfaces
+
+type Pizza = {
+    name: string;
+    size: string[];
+};
+
+// interface Pizza  {
+//     name: string;
+//     size: string[];
+// };
+
+let pizza: Pizza;
+
+function createPizza(name: string, sizes: string[]): Pizza {
+    return {
+        name,
+        size
+    };
 }
 
-let selected: Sizes = Sizes.Small;
-
-function updateSize(size: Sizes): void {
-    selected = size;
-}
-
-updateSize(Sizes.Large);
-console.log(selected);
+pizza = createPizza('Pepperoni', ['small', 'medium']);
